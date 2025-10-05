@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новинний портал — Зворотній зв’язок</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html" aria-label="На головну">
+                <img src="https://t3.ftcdn.net/jpg/02/03/62/64/360_F_203626472_Kzn2eRxkpzy4OKDnQNkdB4fIdW12HEmR.jpg" alt="Логотип порталу" width="60" height="60">
+            </a>
+            <h1>Зворотній зв’язок</h1>
+        </div>
+        <hr>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Персональна інформація</legend>
+
+                <p>
+                    <label for="fullname">Прізвище та ім’я:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="age">Вік:</label><br>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </p>
+
+                <p>
+                    <label for="education">Освіта:</label><br>
+                    <select id="education" name="education" required>
+                        <option value="">— Оберіть варіант —</option>
+                        <option value="full">повна</option>
+                        <option value="partial">неповна</option>
+                        <option value="higher">вища</option>
+                        <option value="vocational">професійна</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="purpose">Мета зворотнього зв’язку:</label><br>
+                <select id="purpose" name="purpose" required>
+                    <option value="">— Оберіть мету —</option>
+                    <option value="cooperation">співпраця</option>
+                    <option value="copyright">скарга на порушення права власності</option>
+                    <option value="suggestion">пропозиція</option>
+                    <option value="bug">наявність помилки</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="details">Детально:</label><br>
+                <textarea id="details" name="details" rows="6" cols="40" maxlength="600" style="max-height: 200px; max-width: 480px;" required></textarea>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    Погоджуюсь на обробку наданої інформації
+                </label>
+            </p>
+
+            <p>
+                <button type="submit">Відправити</button>
+                <button type="reset">Очистити</button>
+                <a href="index.html">На головну сторінку</a>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <small>&copy; Новинний портал</small>
+    </footer>
+</body>
+</html>
+
+
+
