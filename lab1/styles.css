@@ -1,0 +1,102 @@
+/* Загальні налаштування */
+html, body { margin: 0; padding: 0; }
+img { display: block; }
+a { color: inherit; }
+
+/* 1) Головна сторінка */
+/* Абсолютне позиціонування блоку з назвою і логотипом зверху */
+header > div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: #ffffff;
+}
+
+/* Простір під absolute-шапку, щоб не перекривало навігацію */
+header { padding-top: 96px; }
+
+/* Блок з метою має більший внутрішній відступ, ніж зовнішній */
+section#about, section[aria-labelledby="about-title"] {
+    margin: 8px;        /* менший зовнішній */
+    padding: 20px;      /* більший внутрішній */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+/* Блок головного редактора зі зміщенням при hover */
+section#chief, section[aria-labelledby="chief-editor-title"] {
+    transition: transform 120ms ease;
+}
+section#chief:hover, section[aria-labelledby="chief-editor-title"]:hover {
+    transform: translate(-5px, -5px);
+}
+
+/* Перший рядок тексту про головного редактора курсивом через ::first-line */
+section[aria-labelledby="chief-editor-title"] p:first-of-type::first-line {
+    font-style: italic;
+}
+
+/* Адреса збільшується на 20% через 3 сек після фокусу */
+footer address {
+    display: inline-block;
+    transition: transform 200ms ease;
+}
+footer address:focus {
+    animation: growDelayed 3s forwards;
+}
+@keyframes growDelayed {
+    0% { transform: scale(1); }
+    99% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+/* 2) Сторінка «Новини культури» */
+/* Фіксована шапка з логотипом */
+body.culture header > div:first-child {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    z-index: 10;
+}
+/* Простір під fixed-шапку на сторінці культури */
+body.culture header { padding-top: 86px; }
+
+/* Стилі карток новин: рамка темно-вишнева, ліва межа пунктирна, решта товсті */
+body.culture article {
+    border: 4px solid #5a001f; /* темно-вишневий */
+    border-left-style: dashed;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+}
+
+/* Автор: менша вага, менший розмір, похилий */
+body.culture article p strong {
+    font-weight: 500; /* менша вага ніж 700 */
+    font-size: 0.9em; /* менша висота гліфів */
+    font-style: italic; /* похилий */
+}
+
+/* Анімація негативу для фото при наведенні */
+body.culture article img {
+    transition: filter 200ms ease;
+}
+body.culture article img:hover {
+    filter: invert(100%);
+}
+
+/* Посилання в момент кліку — темно-помаранчевий */
+a:active { color: #CC5500; }
+
+
