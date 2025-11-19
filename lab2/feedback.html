@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зворотній зв’язок</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+<header>
+  <div id="logo">
+    <img src="images/logo.png" alt="Логотип">
+    <h1>Новини України</h1>
+  </div>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="feedback.html">Зворотній зв’язок</a>
+  </nav>
+</header>
+
+<main class="flex-container">
+  <form>
+    <fieldset class="personal-info">
+      <legend>Персональна інформація</legend>
+
+      <label>Прізвище та ім’я</label>
+      <input type="text" required>
+
+      <label>E-mail</label>
+      <input type="email" required>
+
+      <label>Вік</label>
+      <input type="number" min="1" max="120" required>
+
+      <label>Освіта</label>
+      <select required>
+        <option value="">Оберіть</option>
+        <option>повна</option>
+        <option>неповна</option>
+        <option>вища</option>
+        <option>професійна</option>
+      </select>
+    </fieldset>
+
+    <label>Мета зворотного зв’язку</label>
+    <select required>
+      <option>співпраця</option>
+      <option>скарга на порушення права власності</option>
+      <option>пропозиція</option>
+      <option>наявність помилки</option>
+    </select>
+
+    <label>Детально</label>
+    <textarea maxlength="500" placeholder="Не більше 500 символів..."></textarea>
+
+    <label>
+      <input type="checkbox" required> Згода на обробку персональних даних
+    </label>
+
+    <button type="submit">Відправити</button>
+  </form>
+</main>
+</body>
+</html>

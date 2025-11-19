@@ -1,0 +1,86 @@
+/* ====================== Головна сторінка ====================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Абсолютне позиціонування логотипу — вже в style.css */
+
+/* Блок з метою — менші зовнішні відступи, більші внутрішні */
+.purpose {
+    background: white;
+    padding: 40px;           /* внутрішні */
+    margin: 20px 0;          /* зовнішні */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Таблиця */
+.staff table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.staff th, .staff td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Блок редактора з трансформацією при hover */
+#editor-block {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+#editor-block:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Перший рядок курсивом через псевдоелемент */
+.first-line::first-line {
+    font-style: italic;
+    color: #8B0000;
+}
+
+/* Контакти з overflow та масштабуванням при фокусі */
+.contacts {
+    background: white;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+.scroll-box {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.contacts:focus {
+    animation: grow 0.5s forwards;
+}
+
+@keyframes grow {
+    to { transform: scale(1.2); }
+}
+
+/* Використання різних позиціонувань */
+#logo { position: absolute; }
+.purpose { position: relative; }
+#editor-block { position: relative; }
+.contacts { position: sticky; top: 20px; }

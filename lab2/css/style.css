@@ -1,0 +1,85 @@
+/* ====================== style.css ====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 140px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #8B0000;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background: rgba(0,0,0,0.5);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logo img {
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+#logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    padding: 100px 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+a:active {
+    color: #FF4500 !important;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
